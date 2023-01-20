@@ -1,0 +1,12 @@
+{
+  "name": "ezra",
+  "version": "1.0",
+  "description": "A GitHub Pages blog generator based on your Obsidian vault",
+  "main": "main.js",
+  "repository": "https://github.com/GToidZ/ezra.git",
+  "author": "GToidZ",
+  "license": "MIT",
+  "devDependencies": {
+    "typescript": "^4.9.4"
+  }
+}

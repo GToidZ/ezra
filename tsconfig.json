@@ -1,0 +1,10 @@
+{
+  "compilerOptions": {
+    "module": "es6",
+    "strict": true,
+    "removeComments": true,
+    "rootDir": "./src",
+    "outDir": "./lib"
+  },
+  "exclude": ["node_modules", "**/*.spec.ts"]
+}

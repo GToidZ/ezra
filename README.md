@@ -11,6 +11,3 @@
 * A blog site with writing and publishing tools.
 * A blog site for multiple people writing.
 
-## What is this repository?
-This repository is a monolithic repository to contain all the parts of Ezra as submodules. This repository is also the home of Ezra's GitHub Actions entrypoint.
-
