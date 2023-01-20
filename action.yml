@@ -1,0 +1,29 @@
+name: 'Build Ezra Blog'
+description: 'Builds a static blog using Ezra tools.'
+inputs:
+  path:
+    description: 'The root path of your Obsidian vault. (Defaults to: .)'
+    required: false
+    default: '.'
+  theme:
+    # You can specify a CSS theme for your Ezra blog by putting repository author/name in `theme`.
+    # Note: Repository must be public.
+    description: 'A repository for an Ezra theme'
+    required: false
+    default: 'GToidZ/ezra-theme'
+runs:
+  using: 'composite'
+  steps:
+    - name: Checkout self
+      uses: actions/checkout@v3
+      with:
+        submodules: true
+    - name: Checkout theme
+      uses: actions/checkout@v3
+      with:
+        repository: ${{ inputs.theme }}
+        path: 'theme'
+    - name: Setup Node
+      uses: actions/setup-node@v3
+      with:
+        node-version: lts/*
