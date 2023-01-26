@@ -13,8 +13,6 @@ inputs:
     default: 'GToidZ/ezra-theme'
 runs:
   using: 'composite'
-  env:
-    theme_path: 'theme'
   steps:
     - name: Checkout self
       uses: actions/checkout@v3
@@ -24,8 +22,14 @@ runs:
       uses: actions/checkout@v3
       with:
         repository: ${{ inputs.theme }}
-        path: ${{ env.theme_path }}
+        path: 'theme'
     - name: Setup Node
       uses: actions/setup-node@v3
       with:
         node-version: lts/*
+    - name: Listing directories
+      runs: |
+        ls .
+    - name: Listing actions directories
+      runs: |
+        ls $GITHUB_ACTION_PATH
