@@ -28,8 +28,8 @@ runs:
       with:
         node-version: lts/*
     - name: Listing directories
-      runs: |
+      run: |
         ls .
     - name: Listing actions directories
-      runs: |
+      run: |
         ls $GITHUB_ACTION_PATH
