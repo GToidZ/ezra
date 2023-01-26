@@ -30,6 +30,8 @@ runs:
     - name: Listing directories
       run: |
         ls .
+      shell: bash
     - name: Listing actions directories
       run: |
         ls $GITHUB_ACTION_PATH
+      shell: bash
